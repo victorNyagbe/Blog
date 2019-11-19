@@ -1,0 +1,19 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': loveIts > 0,
+                'list-group-item-danger': loveIts < 0}">
+
+  <div class="d-flex flex-row-reverse">
+    <div>{{ created_at | date: 'MM/dd/yyyy, hh:mm aa' }}</div>
+  </div>
+  <div class="d-flex flex-row mb-2">
+    <div>{{ title }}</div>
+  </div>
+
+  <p class="text-justify">{{ content }}</p>
+
+  <div>
+    <button class="btn btn-sm btn-success mr-3" (click)="getLove()">Love it!</button>
+    <button class="btn btn-sm btn-danger" (click)="dontGetLove()">Don't love it!</button>
+  </div>
+
+</li>
